@@ -20,8 +20,8 @@ def no1():
 def no2():
     global sampah_tahun
     sampah_tahun = []
-    sampah = 0
     for i in range (9):
+        sampah = 0
         for index,row in df_sampah.iterrows():
             if row["tahun"] == tahun[i]:
                 sampah = row["jumlah_produksi_sampah"] + sampah
@@ -77,7 +77,7 @@ def menu():
         no_4.to_excel(writer, sheet_name="NO 4", index=True)
 
     no_2.to_csv("Pertemuan 10/export/no_2.csv", index=True)  
-    no_3.to_csv("Pertemuan 10/export/no_3.csv", index=True)
+    no_3.to_csv("Pertemuan 10/export/no_3.csv", index=True) 
     no_4.to_csv("Pertemuan 10/export/no_4.csv", index=True)
 
 if __name__ == "__main__":
